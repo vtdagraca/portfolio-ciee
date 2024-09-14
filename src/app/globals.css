@@ -184,6 +184,10 @@ header {
 @media (max-width: 467px) {
   .sobremimtext {
     width: 90%;
+    margin-top: 10px;
+  }
+  .sobremimtitle {
+    margin-top: 10px;
   }
   .textenc1 {
     font-size: 12px;

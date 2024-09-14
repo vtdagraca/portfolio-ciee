@@ -118,19 +118,31 @@ const Home: React.FC = () => {
       </div>
       <div id="sobremim" className="sobremim bg-lime-500 h-[500px] flex justify-end items-center">
         <div className="text-center text-white mx-auto p-[15px]">
-          <p className="sobremimtitle text-[30px] mb-[50px]">Sobre mim:</p>
+          <p className="sobremimtitle text-[30px] mt-[15px] rounded-xl border-2 border-lime-400 bg-[#10435e] mx-auto p-[5px] w-[200px] mb-[50px]">Sobre mim:</p>
           <p className="sobremimtext text-[15px] w-[700px]">Olá, meu nome é Vitor de Oliveira da Graça,
             tenho 16 anos e estou atualmente cursando o programa de formação do CIEE,
             me preparando para uma experiência de trabalho como Jovem Aprendiz no Sicoob Seguros.
             Essa fase de preparação tem sido muito importante para o meu desenvolvimento pessoal e profissional.</p>
           <p className="sobremimtext text-[15px] w-[700px] mt-[10px]">
-            Desde cedo, sempre fui fascinado por tecnologia, o que me levou a buscar
-            capacitação na área de programação. Ao longo do tempo, tenho me dedicado
-            a aprender diversas linguagens e ferramentas, com o objetivo de me tornar um programador
-            cada vez mais preparado para os desafios do mercado. </p>
+            Desde cedo, sempre fui fascinado por tecnologia, o que me levou a buscar capacitação na
+            área. Em 2023, ingressei no curso da
+            <a
+              href="https://www.eliti.com.br"
+              className="text-[#134d6d] ml-[5px] underline cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer">ELITI
+            </a>, uma escola focada na formação de líderes em TI,
+            onde estou até hoje. A experiência na Eliti tem sido fundamental, proporcionando uma base
+            sólida em liderança e inovação. A partir daí, me aprofundei em diversas linguagens e
+            ferramentas de programação, sempre buscando me aprimorar e me tornar um profissional
+            mais preparado para os desafios do mercado.</p>
           <p id="ultimotextsobremim" className="sobremimtext text-[15px] w-[700px] mt-[10px]">Estou ansioso para começar a trabalhar no
-            Sicoob e aplicar todo o conhecimento técnico que estou adquirindo, especialmente no desenvolvimento
-            de soluções automatizadas. Vejo essa oportunidade como um caminho para crescer, tanto profissionalmente
+          <a
+              href="https://www.sicoob.com.br/"
+              className="text-[#134d6d] ml-[5px] underline cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer">SICOOB
+            </a> e aplicar todo o conhecimento técnico que estou adquirindo. Vejo essa oportunidade como um caminho para crescer, tanto profissionalmente
             quanto pessoalmente, e estou muito empolgado para contribuir com a equipe e continuar aprimorando conhecimento.</p>
         </div>
         <div className="mt-[51px] w-[300px]">
@@ -291,13 +303,13 @@ const Home: React.FC = () => {
           <Image src={interpessoal} alt="imagem" />
         </div>
         <p className="textenc1 mb-[50px] text-white w-[70%] mx-auto">
-          O que mais me interessou foi a importância do relacionamento interpessoal no 
-          ambiente de trabalho, como a maneira que nos relacionamos pode impactar o dia 
-          a dia e os resultados. A inteligência emocional foi outro ponto interessante, 
-          mostrando como entender e controlar nossas emoções pode melhorar nossas relações 
-          e nosso desempenho. Gostei também de aprender sobre a comunicação no trabalho, 
-          tanto a verbal quanto a não verbal, e como ela é fundamental para manter um 
-          bom ambiente. Além disso, os 6 pilares do relacionamento interpessoal foram 
+          O que mais me interessou foi a importância do relacionamento interpessoal no
+          ambiente de trabalho, como a maneira que nos relacionamos pode impactar o dia
+          a dia e os resultados. A inteligência emocional foi outro ponto interessante,
+          mostrando como entender e controlar nossas emoções pode melhorar nossas relações
+          e nosso desempenho. Gostei também de aprender sobre a comunicação no trabalho,
+          tanto a verbal quanto a não verbal, e como ela é fundamental para manter um
+          bom ambiente. Além disso, os 6 pilares do relacionamento interpessoal foram
           uma ótima base para entender como melhorar as interações com os colegas.
         </p>
         <p className="relative z-1 mb-[35px] text-lime-500 text-[20px]">
