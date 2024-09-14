@@ -2,26 +2,259 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, rgb(0, 54, 65), rgb(0, 90, 100));
+  font-weight: 700;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+header {
+  background: linear-gradient(to right, rgb(0, 54, 65), rgb(0, 90, 100));
+}
+.scrolling-text-container {
+  position: relative;
+  width: 100%;
+  background-color: #00AE9D;
+  margin-top: 35px;
+  margin-bottom: -70px;
+  overflow: hidden;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 39px;
+  color: white;
+  animation: scroll 25s linear infinite;
+  animation-delay: -10s
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.pulsate {
+  animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+
+.menu {
+  background: linear-gradient(to right, rgb(0, 40, 48), rgb(0, 67, 75));
+}
+
+.foto {
+  background-color: rgba(0, 255, 213, 0.0);
+}
+
+.textoinicial {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.vtgraca {
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.apresentacao {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sobremim {
+  background: linear-gradient(to right, rgb(125, 196, 19), #47b100);
+}
+
+.vtdagracatitle {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@media (max-width: 1020px) {
+  .sobremimtext {
+    font-size: 13px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 967px) {
+  #portfolio {
+    height: 340px;
+  }
+
+  .portfoliotitle {
+    margin-top: 0px;
+  }
+  .imgenc3 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 825px) {
+  .sobremim {
+    flex-direction: column;
+    height: 800px;
+  }
+
+  #ultimotextsobremim {
+    margin-bottom: -100px;
+  }
+
+  .vitor {
+    margin-left: auto;
+    margin-right: 0px;
+  }
+  .cliquesumario {
+    width: 80%
+  }
+  .cliquesumario p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  #portfolio {
+    margin-top: 80px;
+  }
+  .scrolling-text-container {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 706px) {
+  #portfolio {
+    height: 400px;
+  }
+  .textenc1 {
+    width: 95%;
+  }
+}
+
+@media (max-width: 559px) {
+  .menu {
+    width: 100%;
+  }
+  .portfoliotext {
+    font-size: 15px;
+  }
+  .sobremimtext {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .vitor {
+    height: 300px;
+    width: 200px;
+  }
+}
+@media (max-width: 520px) {
+  .titleenc1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 467px) {
+  .sobremimtext {
+    width: 90%;
+  }
+  .textenc1 {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+@media (max-width: 415px) {
+  .portfoliotext {
+    width: 300px;
+  }
+  .sobremimtext {
+    width: 300px;
+  }
+  .sobremimtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .titleenc1 {
+    font-size: 25px;
+  }
+  .imgenc1 {
+    width: 180px;
+  }
+  .imgenc2 {
+    width: 150px;
+  }
+}
+
+@media (max-width: 398px) {
+  #portfolio {
+    font-size: 15px;
+    margin-top: 180px;
+  }
+
+  .portfoliotitle {
+    font-size: 25px;
+  }
+}
+@media (max-width: 368px) {
+  .sobremimtext {
+    font-size: 10px;
+    width: 200px;
+  }
+  .sobremim {
+    margin: 0;
+  }
+
+}
+@media (max-width: 342px) {
+  .portfoliotitle {
+    font-size: 20px;
+  }
+
+  .portfoliotext {
+    font-size: 13px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  #portfolio {
+    margin-top: 220px;
+  }
+
+  .textheader {
+    font-size: 14px;
+  }
+  .sobremimtext {
+    width: 90%;
+  }
+  .vitor {
+    padding: 0;
   }
 }
