@@ -44,7 +44,7 @@ const Home: React.FC = () => {
       <header className="flex items-center justify-between text-aliceblue h-[70px] p-4 relative border-b-2 border-lime-500">
         <p className="textheader text-white text-lg">Vitor de Oliveira da Graça</p>
         <button
-          className="text-white focus:outline-none flex items-center"
+          className="text-white focus:outline-none flex items-center hover:text-[#00AE9D] duration-300"
           onClick={toggleMenu}
         >
           <p className="mr-[10px]">Sumário</p>
@@ -52,7 +52,6 @@ const Home: React.FC = () => {
         </button>
       </header>
 
-      {/* Overlay preto semitransparente */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black opacity-50 z-10" onClick={closeMenu}></div>
       )}
@@ -62,23 +61,23 @@ const Home: React.FC = () => {
       >
         <button className="cursor-pointer ml-[95%] text-white text-[25px]" onClick={closeMenu}>x</button>
         <p className="text-center text-xl mb-[20px] text-lime-500">Sumário:</p>
-        <li className="mb-2"><a onClick={closeMenu} href="#" className="text-white">Início</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#portfolio" className="text-white">O que é o portfólio CIEE?</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#sobremim" className="text-white">Sobre mim</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#" className="text-white hover:text-lime-500 duration-200">Início</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#portfolio" className="text-white hover:text-lime-500 duration-200">O que é o portfólio CIEE?</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#sobremim" className="text-white hover:text-lime-500 duration-200">Sobre mim</a></li>
         <p className="text-center text-xl mb-[20px] text-lime-500">Encontros:</p>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc1" className="text-white">Encontro 1 - Lei da aprendizagem</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc2" className="text-white">Encontro 2 - Direito e deveres do empregado e empregador</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc3" className="text-white">Encontro 3 - Conceitos e tipos de empresa</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc4" className="text-white">Encontro 4 - Ética profissional</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc5" className="text-white">Encontro 5 - Relações interpessoais</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc6" className="text-white">Encontro 6 - Gestão do tempo</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc7" className="text-white">Encontro 7 - Saúde do trabalhador</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc8" className="text-white">Encontro 8 - Noções básicas do uso do computador</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc9" className="text-white">Encontro 9 - Internet e segurança digital</a></li>
-        <li className="mb-2"><a onClick={closeMenu} href="#enc10" className="text-white">Encontro 10 - Pacote office</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc1" className="text-white hover:text-lime-500 duration-200">Encontro 1 - Lei da aprendizagem</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc2" className="text-white hover:text-lime-500 duration-200">Encontro 2 - Direito e deveres do empregado e empregador</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc3" className="text-white hover:text-lime-500 duration-200">Encontro 3 - Conceitos e tipos de empresa</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc4" className="text-white hover:text-lime-500 duration-200">Encontro 4 - Ética profissional</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc5" className="text-white hover:text-lime-500 duration-200">Encontro 5 - Relações interpessoais</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc6" className="text-white hover:text-lime-500 duration-200">Encontro 6 - Gestão do tempo</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc7" className="text-white hover:text-lime-500 duration-200">Encontro 7 - Saúde do trabalhador</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc8" className="text-white hover:text-lime-500 duration-200">Encontro 8 - Noções básicas do uso do computador</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc9" className="text-white hover:text-lime-500 duration-200">Encontro 9 - Internet e segurança digital</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#enc10" className="text-white hover:text-lime-500 duration-200">Encontro 10 - Pacote office</a></li>
       </ul>
 
-      <div className="scrolling-text-container">
+      <div className="scrolling-text-container shadow-[0_-4px_6px_rgba(0,0,0,0.1),0_4px_6px_rgba(0,0,0,0.1)]">
         <div className="scrolling-text">
           - Vitor de Oliveira da Graça, Jovem Aprendiz de Automação Operacional no Banco Sicoob.
         </div>
@@ -86,10 +85,22 @@ const Home: React.FC = () => {
 
       <main className="text-white flex flex-col md:flex-row md:items-center md:justify-between p-4 h-[600px]">
         <div className="foto border-b-[1px] border-l-[1px] border-lime-400 rounded-[0px] flex flex-col items-center w-full md:w-[40%] mb-4 md:mb-0">
-          <Image className="h-[150px] w-[300px] p-4 md:h-[200px] md:w-[400px] object-contain" src={Imagem} alt="Imagem" />
-          <Image className="mt-4 h-[100px] p-4 w-[250px] md:h-[150px] md:w-[350px] object-contain" src={logosicoob} alt="Logo Sicoob" />
+          <a
+            href="https://portal.ciee.org.br/"
+            className="cursor-pointer"
+            target="_blank"
+            rel="noopener noreferrer">
+            <Image className="h-[150px] w-[300px] p-4 md:h-[200px] md:w-[400px] object-contain hover:scale-105 transition-transform duration-300 ease-in-out" src={Imagem} alt="Imagem" />
+          </a>
+          <a
+            href="https://www.sicoob.com.br/"
+            className="cursor-pointer"
+            target="_blank"
+            rel="noopener noreferrer">
+            <Image className="mt-4 h-[100px] p-4 w-[250px] md:h-[150px] md:w-[350px] object-contain hover:scale-105 transition-transform duration-300 ease-in-out" src={logosicoob} alt="Logo Sicoob" />
+          </a>
         </div>
-        <div className="apresentacao p-5 text-center mr-[10%] md:text-left w-full md:w-[40%]">
+        <div className="apresentacao p-5 text-center mr-[10%] md:text-left w-full md:w-[40%] hover:scale-105 transition-transform duration-300 ease-in-out">
           <p className="textoinicial text-lime-400 text-[30px] text-center">
             Portfólio
           </p>
@@ -112,7 +123,7 @@ const Home: React.FC = () => {
         <p className="portfoliotext text-[18px] text-center w-[70%] mx-auto">O portfólio CIEE é uma atividade que junta os principais registros dos encontros EAD do Programa CIEE. Ele tem como objetivo mostrar para as empresas um resumo do que foi aprendido e vivenciado durante o curso, dando uma ideia das experiências e conhecimentos que os participantes adquiriram. Assim, o portfólio ajuda a compartilhar um pouco da jornada de desenvolvimento do aprendiz com as empresas.</p>
       </div>
       <div className='teste h-[200px]'>
-        <button onClick={toggleMenu} className="flex items-center cliquesumario h-[100px] border-lime-500 border-2 w-[50%] mx-auto mt-[100px] text-white pulsate">
+        <button onClick={toggleMenu} className="flex items-center cliquesumario h-[100px] border-lime-500 hover:border-white hover:text-lime-500 duration-300 border-2 w-[50%] mx-auto mt-[100px] text-white pulsate">
           <p className="flex mx-auto text-[30px]">Acesse o Sumário Aqui <PiCursorClickLight /></p>
         </button>
       </div>
@@ -125,7 +136,7 @@ const Home: React.FC = () => {
             Essa fase de preparação tem sido muito importante para o meu desenvolvimento pessoal e profissional.</p>
           <p className="sobremimtext text-[15px] w-[700px] mt-[10px]">
             Desde cedo, sempre fui fascinado por tecnologia, o que me levou a buscar capacitação na
-            área. Em 2023, ingressei no curso da
+            área. Á alguns meses atrás, ingressei no curso da
             <a
               href="https://www.eliti.com.br"
               className="text-[#134d6d] ml-[5px] underline cursor-pointer"
@@ -133,11 +144,11 @@ const Home: React.FC = () => {
               rel="noopener noreferrer">ELITI
             </a>, uma escola focada na formação de líderes em TI,
             onde estou até hoje. A experiência na Eliti tem sido fundamental, proporcionando uma base
-            sólida em liderança e inovação. A partir daí, me aprofundei em diversas linguagens e
+            sólida em T.i, liderança e inovação. A partir daí, me aprofundei em diversas linguagens e
             ferramentas de programação, sempre buscando me aprimorar e me tornar um profissional
             mais preparado para os desafios do mercado.</p>
           <p id="ultimotextsobremim" className="sobremimtext text-[15px] w-[700px] mt-[10px]">Estou ansioso para começar a trabalhar no
-          <a
+            <a
               href="https://www.sicoob.com.br/"
               className="text-[#134d6d] ml-[5px] underline cursor-pointer"
               target="_blank"
@@ -150,7 +161,6 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="text-center encontro1 p-[50px]" id='enc1'>
-        {/*<Image className='w-[300px] ml-[10%] mt-[130px] absolute z-0' src={direitos} alt="Imagem" />*/}
         <p className="relative z-1 text-white text-[20px]">Encontro 1</p>
         <p className="titleenc1 text-lime-500 text-[40px]">Lei da Aprendizagem</p>
         <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
@@ -164,7 +174,7 @@ const Home: React.FC = () => {
           de forma saudável, sem serem exploradas no mercado de
           trabalho.
         </p>
-        <div className="imgenc1 bg-lime-500 border-2 border-white flex justify-center mx-auto mb-[30px] p-[10px] w-[300px]">
+        <div className="imgenc1 bg-lime-500 border-2 border-white flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
           <Image src={aprendiz} alt="imagem" />
         </div>
         <p className="textenc1 text-white w-[70%] mx-auto">
@@ -193,7 +203,7 @@ const Home: React.FC = () => {
           importante foi a inclusão de pessoas com deficiência no mercado de trabalho,
           com leis que garantem acessibilidade e oportunidades.
         </p>
-        <div className="imgenc2 bg-lime-500 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px]">
+        <div className="imgenc2 bg-lime-500 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
           <Image src={clt} alt="imagem" />
         </div>
         <p className="textenc1 text-white w-[70%] mx-auto">
@@ -263,7 +273,7 @@ const Home: React.FC = () => {
         <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
           No quarto encontro, aprendi sobre ética profissional, entendendo o que
           significa agir com responsabilidade e integridade no ambiente de trabalho.
-          Vimos exemplos práticos de ética, como a importância de ser honesto,
+          Vi exemplos práticos de ética, qual a importância de ser honesto,
           respeitar os colegas e cumprir os compromissos. Também falamos sobre
           ética empresarial, que envolve as práticas de uma empresa em relação aos
           seus funcionários, clientes e a sociedade. Aprendi como ela se aplica
@@ -271,7 +281,7 @@ const Home: React.FC = () => {
           profissional no trabalho significa ter atitudes justas e respeitosas em
           todas as situações.
         </p>
-        <div className="imgenc2 bg-lime-500 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px]">
+        <div className="imgenc2 bg-lime-500 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
           <Image src={etica} alt="imagem" />
         </div>
         <p className="textenc1 text-white w-[70%] mx-auto">
@@ -299,7 +309,7 @@ const Home: React.FC = () => {
           profissional e como a comunicação, tanto verbal quanto não verbal, é essencial
           nas organizações para garantir uma boa convivência e produtividade.
         </p>
-        <div className="imgenc2 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px]">
+        <div className="imgenc2 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
           <Image src={interpessoal} alt="imagem" />
         </div>
         <p className="textenc1 mb-[50px] text-white w-[70%] mx-auto">

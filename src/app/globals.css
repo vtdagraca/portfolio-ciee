@@ -157,6 +157,9 @@ header {
   .textenc1 {
     width: 95%;
   }
+  .sobremim {
+    height: 900px;
+  }
 }
 
 @media (max-width: 559px) {
