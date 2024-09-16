@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Alex_Brush } from 'next/font/google'
+import { Dancing_Script } from 'next/font/google';
 
-
-const alexBrush = Alex_Brush({
-  weight: "400",
-  variable: "--font-alex_brush",
+// Configuração da fonte Quicksand
+const quicksand = Dancing_Script({
+  weight: "400", // ou outros pesos que você desejar
+  variable: "--font-quicksand",
   subsets: ['latin'],
   display: "swap",
   style: "normal",
-})
+});
 
 export const metadata: Metadata = {
   title: "Portfolio CIEE",
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={` ${alexBrush.variable} antialiased`}
+        className={`${quicksand.variable} antialiased`} // Correção da variável da fonte
       >
         {children}
       </body>

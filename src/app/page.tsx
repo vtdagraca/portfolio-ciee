@@ -1,5 +1,6 @@
 'use client';
 
+import relogio from "./img/relogio.png"
 import interpessoal from "./img/interpessoais.webp"
 import etica from "./img/etica.png"
 import organograma from "./img/organograma.png"
@@ -13,6 +14,7 @@ import './globals.css';
 import { MdOutlineMenuBook } from "react-icons/md";
 import Image from 'next/image';
 import { PiCursorClickLight } from "react-icons/pi";
+import { MdOutlineLaptopChromebook } from "react-icons/md";
 
 const Home: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -100,7 +102,7 @@ const Home: React.FC = () => {
             <Image className="mt-4 h-[100px] p-4 w-[250px] md:h-[150px] md:w-[350px] object-contain hover:scale-105 transition-transform duration-300 ease-in-out" src={logosicoob} alt="Logo Sicoob" />
           </a>
         </div>
-        <div className="apresentacao p-5 text-center mr-[10%] md:text-left w-full md:w-[40%] hover:scale-105 transition-transform duration-300 ease-in-out">
+        <div className="apresentacao p-5 text-center mr-[10%] md:text-left w-full md:w-[40%] border-lime-500 border-[1px] hover:scale-105 transition-transform duration-300 ease-in-out">
           <p className="textoinicial text-lime-400 text-[30px] text-center">
             Portfólio
           </p>
@@ -127,7 +129,7 @@ const Home: React.FC = () => {
           <p className="flex mx-auto text-[30px]">Acesse o Sumário Aqui <PiCursorClickLight /></p>
         </button>
       </div>
-      <div id="sobremim" className="sobremim bg-lime-500 h-[500px] flex justify-end items-center">
+      <div id="sobremim" className="sobremim bg-[#00AE9D] h-[500px] flex justify-end items-center">
         <div className="text-center text-white mx-auto p-[15px]">
           <p className="sobremimtitle text-[30px] mt-[15px] rounded-xl border-2 border-lime-400 bg-[#10435e] mx-auto p-[5px] w-[200px] mb-[50px]">Sobre mim:</p>
           <p className="sobremimtext text-[15px] w-[700px]">Olá, meu nome é Vitor de Oliveira da Graça,
@@ -338,6 +340,34 @@ const Home: React.FC = () => {
           Respeito: Valorizar a dignidade dos outros. <br />
           <span className="text-lime-500">6- </span>
           Empatia: Compreender e compartilhar os sentimentos alheios.
+        </p>
+      </div>
+      <div className="bg-lime-500 text-center encontro1 p-[50px]" id='enc2'>
+        <p className="relative z-1 text-white text-[20px]">Encontro 6</p>
+        <p className="titleenc1 text-[#10435e] text-[40px]">Gestão do tempo</p>
+        <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          No sexto encontro, aprendi sobre a gestão do tempo e como ela é essencial
+          para melhorar a produtividade, seja no trabalho ou nos estudos. Aprendi também
+          sobre o uso de calendários e aplicativos como ferramentas para melhor organização da rotina.
+          Conheci os princípios básicos de gestão do tempo e a Técnica Pomodoro,
+          que ajuda a manter o foco e aumentar a produtividade em blocos de tempo.
+          Também vimos técnicas para combater a procrastinação, além de dicas para
+          planejar melhor os estudos e gerenciar o tempo de forma eficiente.
+        </p>
+        <div className="imgenc2 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Image src={relogio} alt="imagem" />
+        </div>
+        <p className="textenc1 text-white w-[70%] mx-auto">
+          O que mais me interessou foi a Técnica Pomodoro, que funciona dividindo o 
+          tempo em blocos de 25 minutos de trabalho intenso, seguidos de uma pausa 
+          curta de 5 minutos. Após quatro ciclos, faz-se uma pausa mais longa, 
+          geralmente de 15 a 30 minutos. Essa técnica ajuda a manter o foco e 
+          evita a sensação de cansaço ao quebrar o trabalho em partes gerenciáveis. 
+          Também concordo com o uso de aplicativos para a organização do tempo, 
+          pois já utilizo algumas ferramentas que me ajudam a planejar tarefas e 
+          manter a produtividade em dia. Além disso, a técnica contra a 
+          procrastinação foi importante para mim, pois auxilia a evitar 
+          distrações e focar no que realmente importa.
         </p>
       </div>
     </div>
