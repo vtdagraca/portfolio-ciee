@@ -135,7 +135,7 @@ const Home: React.FC = () => {
           <p className="flex mx-auto text-[30px]">Acesse o Sumário Aqui <PiCursorClickLight /></p>
         </button>
       </div>
-      <svg className="mt-[-30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00AE9D" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,117.3C384,128,480,192,576,197.3C672,203,768,149,864,144C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+      <svg className="mt-[-30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00AE9D" fillOpacity="1" d="M0,192L48,170.7C96,149,192,107,288,117.3C384,128,480,192,576,197.3C672,203,768,149,864,144C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
       <div id="sobremim" className="sobremim bg-[#00AE9D] border-b-2 border-lime-500 h-[500px] flex justify-end items-center">
         <div className="text-center text-white mx-auto p-[15px]">
           <p className="sobremimtitle text-[30px] mt-[15px] rounded-xl border-2 border-lime-400 bg-[#10435e] mx-auto p-[5px] w-[200px] mb-[50px]">Sobre mim:</p>
@@ -413,7 +413,7 @@ const Home: React.FC = () => {
         <p className="titleenc1 text-[#10435e] text-[40px]">Noções básicas do uso do computador</p>
         <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
           No oitavo encontro, pude ver sobre conceitos básicos do uso do computador e a
-          importância da tecnologia (a palavra "tecnologia" se refere ao conjunto
+          importância da tecnologia (a palavra tecnologia se refere ao conjunto
           de conhecimentos e ferramentas que facilitam nossa vida e o trabalho).
           Falamos sobre o uso de desktops (que são computadores de mesa), e como eles
           são fundamentais para diversas atividades. Também exploramos informática
@@ -539,7 +539,7 @@ const Home: React.FC = () => {
 
 
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00AE9D" fill-opacity="1" d="M0,256L120,250.7C240,245,480,235,720,234.7C960,235,1200,245,1320,250.7L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00AE9D" fillOpacity="1" d="M0,256L120,250.7C240,245,480,235,720,234.7C960,235,1200,245,1320,250.7L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
       <div id="avalie" className="avaliacao flex items-center bg-[#00AE9D] h-[440px]">
         <AvaliationForm />
       </div>
