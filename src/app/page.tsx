@@ -48,7 +48,7 @@ const Home: React.FC = () => {
   return (
     <div className="Main">
       <header className="flex items-center justify-between text-aliceblue h-[70px] p-4 relative border-b-2 border-lime-500">
-        <p className="textheader text-white text-lg">Vitor de Oliveira da Graça</p>
+        <p className="textheader text-white text-lg">Vitor<span className="nomeresponsivo"> de Oliveira da</span> Graça</p>
         <button
           className="text-white focus:outline-none flex items-center hover:text-[#00AE9D] duration-300"
           onClick={toggleMenu}
@@ -63,7 +63,7 @@ const Home: React.FC = () => {
       )}
 
       <ul
-        className={`menu fixed top-0 right-0 bg-[#00AE9D] p-4 transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} w-[500px] z-20`}
+        className={`menu fixed overflow-auto top-0 right-0 bg-[#00AE9D] h-[100%] p-4 transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} w-[500px] z-20`}
       >
         <button className="cursor-pointer ml-[95%] text-white text-[25px]" onClick={closeMenu}>x</button>
         <p className="text-center text-xl mb-[20px] text-lime-500">Sumário:</p>
