@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Dancing_Script } from 'next/font/google';
+import { Mulish } from 'next/font/google';
 
 // Configuração da fonte Quicksand
-const quicksand = Dancing_Script({
-  weight: "400", // ou outros pesos que você desejar
+const quicksand = Mulish({
+  weight: "200", // ou outros pesos que você desejar
   variable: "--font-quicksand",
   subsets: ['latin'],
   display: "swap",

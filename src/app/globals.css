@@ -19,6 +19,7 @@ body {
 header {
   background: linear-gradient(to right, rgb(0, 54, 65), rgb(0, 90, 100));
 }
+
 .scrolling-text-container {
   position: relative;
   width: 100%;
@@ -34,7 +35,7 @@ header {
 .scrolling-text {
   display: inline-block;
   white-space: nowrap;
-  font-size: 39px;
+  font-size: 30px;
   color: white;
   animation: scroll 25s linear infinite;
   animation-delay: -10s
@@ -44,26 +45,33 @@ header {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
+
 .pulsate {
-  animation: pulse 1.5s infinite; 
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
-    transform: scale(1); 
+    transform: scale(1);
   }
 }
 
+.fundoavaliacao {
+  background: linear-gradient(to right, rgb(0, 40, 48, 0.7), rgb(0, 67, 75, 0.7));
+}
 
 .menu {
   background: linear-gradient(to right, rgb(0, 40, 48), rgb(0, 67, 75));
@@ -89,19 +97,54 @@ header {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-
 .vtdagracatitle {
   font-family: var(--font-quicksand), sans-serif;
 }
 
+.sobremim {
+  box-shadow: 0 -10px 0px rgba(0, 174, 157, 1.0);
+}
+
+.avaliacao {
+  box-shadow: 0 -10px 0px rgba(0, 174, 157, 1.0);
+}
+.textfooter {
+  font-size: 100%;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.footer {
+  background: linear-gradient(to right, #84cc16, #16a34a);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  transition: background 0.5s ease, background-color 0.5s ease;
+}
+.footer:hover {
+  background: rgba(0, 0, 0, 0);
+}
 @keyframes blink-caret {
-  from, to {
+
+  from,
+  to {
     border-color: transparent;
   }
+
   50% {
     border-color: black;
   }
 }
+
 @media (max-width: 1020px) {
   .sobremimtext {
     font-size: 13px;
@@ -117,8 +160,17 @@ header {
   .portfoliotitle {
     margin-top: 0px;
   }
+
   .imgenc3 {
     width: 90%;
+  }
+
+  .todaavaliacao {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .avaliacao {
+    height: 600px;
   }
 }
 
@@ -136,9 +188,11 @@ header {
     margin-left: auto;
     margin-right: 0px;
   }
+
   .cliquesumario {
     width: 80%
   }
+
   .cliquesumario p {
     font-size: 20px;
   }
@@ -148,6 +202,7 @@ header {
   #portfolio {
     margin-top: 80px;
   }
+
   .scrolling-text-container {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -158,9 +213,11 @@ header {
   #portfolio {
     height: 400px;
   }
+
   .textenc1 {
     width: 95%;
   }
+
   .sobremim {
     height: 900px;
   }
@@ -170,54 +227,95 @@ header {
   .menu {
     width: 100%;
   }
+
   .portfoliotext {
     font-size: 15px;
   }
+
   .sobremimtext {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
+
   .vitor {
     height: 300px;
     width: 200px;
   }
 }
+
 @media (max-width: 520px) {
   .titleenc1 {
     font-size: 30px;
   }
+
+  .estrelas {
+    font-size: 40px;
+  }
+
+  .tamanhoavaliacao {
+    width: 300px;
+  }
+
+  .avaliacaotext1 {
+    font-size: 30px;
+  }
+
+  .avaliacaotext2 {
+    font-size: 60px;
+  }
 }
+
 @media (max-width: 467px) {
   .sobremimtext {
     width: 90%;
     margin-top: 10px;
   }
+
   .sobremimtitle {
     margin-top: 10px;
   }
+
   .textenc1 {
     font-size: 12px;
     width: 100%;
   }
+
+  .avaliacaotext1 {
+    font-size: 18px;
+  }
+
+  .avaliacaotext2 {
+    font-size: 45px;
+  }
+
+  .tamanhoavaliacao {
+    width: 200px;
+  }
 }
+
 @media (max-width: 415px) {
   .portfoliotext {
     width: 300px;
   }
+
   .sobremimtext {
     width: 300px;
   }
+
   .sobremimtitle {
     font-size: 20px;
     margin-bottom: 15px;
   }
+
   .titleenc1 {
     font-size: 25px;
   }
+
   .imgenc1 {
     width: 180px;
   }
+
   .imgenc2 {
     width: 150px;
   }
@@ -233,16 +331,19 @@ header {
     font-size: 25px;
   }
 }
+
 @media (max-width: 368px) {
   .sobremimtext {
     font-size: 10px;
     width: 200px;
   }
+
   .sobremim {
     margin: 0;
   }
 
 }
+
 @media (max-width: 342px) {
   .portfoliotitle {
     font-size: 20px;
@@ -251,6 +352,14 @@ header {
   .portfoliotext {
     font-size: 13px;
     width: 200px;
+  }
+
+  .avaliacaotext1 {
+    font-size: 15px;
+  }
+
+  .avaliacaotext2 {
+    font-size: 40px;
   }
 }
 
@@ -262,9 +371,11 @@ header {
   .textheader {
     font-size: 14px;
   }
+
   .sobremimtext {
     width: 90%;
   }
+
   .vitor {
     padding: 0;
   }

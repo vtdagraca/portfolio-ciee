@@ -1,5 +1,10 @@
 'use client';
 
+import office from "./img/office.png"
+import seguranca from "./img/segurança.webp"
+import tecdesenho from "./img/tecdesenho.png"
+import desenhopc from "./img/desenhopc.png"
+import saude from "./img/saudedotrabalhador.png"
 import relogio from "./img/relogio.png"
 import interpessoal from "./img/interpessoais.webp"
 import etica from "./img/etica.png"
@@ -14,7 +19,7 @@ import './globals.css';
 import { MdOutlineMenuBook } from "react-icons/md";
 import Image from 'next/image';
 import { PiCursorClickLight } from "react-icons/pi";
-import { MdOutlineLaptopChromebook } from "react-icons/md";
+import AvaliationForm from './components/AvaliationForm';
 
 const Home: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -28,7 +33,6 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    // Função para desativar a rolagem quando o menu estiver aberto
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -66,6 +70,8 @@ const Home: React.FC = () => {
         <li className="mb-2"><a onClick={closeMenu} href="#" className="text-white hover:text-lime-500 duration-200">Início</a></li>
         <li className="mb-2"><a onClick={closeMenu} href="#portfolio" className="text-white hover:text-lime-500 duration-200">O que é o portfólio CIEE?</a></li>
         <li className="mb-2"><a onClick={closeMenu} href="#sobremim" className="text-white hover:text-lime-500 duration-200">Sobre mim</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#conclusao" className="text-white hover:text-lime-500 duration-200">Conclusão</a></li>
+        <li className="mb-2"><a onClick={closeMenu} href="#avalie" className="text-white hover:text-lime-500 duration-200">Avalie</a></li>
         <p className="text-center text-xl mb-[20px] text-lime-500">Encontros:</p>
         <li className="mb-2"><a onClick={closeMenu} href="#enc1" className="text-white hover:text-lime-500 duration-200">Encontro 1 - Lei da aprendizagem</a></li>
         <li className="mb-2"><a onClick={closeMenu} href="#enc2" className="text-white hover:text-lime-500 duration-200">Encontro 2 - Direito e deveres do empregado e empregador</a></li>
@@ -81,12 +87,12 @@ const Home: React.FC = () => {
 
       <div className="scrolling-text-container shadow-[0_-4px_6px_rgba(0,0,0,0.1),0_4px_6px_rgba(0,0,0,0.1)]">
         <div className="scrolling-text">
-          - Vitor de Oliveira da Graça, Jovem Aprendiz de Automação Operacional no Banco Sicoob.
+          - Vitor de Oliveira da Graça, Jovem Aprendiz de Automação Operacional na Cooperativa Sicoob.
         </div>
       </div>
 
       <main className="text-white flex flex-col md:flex-row md:items-center md:justify-between p-4 h-[600px]">
-        <div className="foto border-b-[1px] border-l-[1px] border-lime-400 rounded-[0px] flex flex-col items-center w-full md:w-[40%] mb-4 md:mb-0">
+        <div className="foto flex flex-col items-center w-full md:w-[40%] mb-4 md:mb-0">
           <a
             href="https://portal.ciee.org.br/"
             className="cursor-pointer"
@@ -129,7 +135,8 @@ const Home: React.FC = () => {
           <p className="flex mx-auto text-[30px]">Acesse o Sumário Aqui <PiCursorClickLight /></p>
         </button>
       </div>
-      <div id="sobremim" className="sobremim bg-[#00AE9D] h-[500px] flex justify-end items-center">
+      <svg className="mt-[-30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00AE9D" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,117.3C384,128,480,192,576,197.3C672,203,768,149,864,144C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+      <div id="sobremim" className="sobremim bg-[#00AE9D] border-b-2 border-lime-500 h-[500px] flex justify-end items-center">
         <div className="text-center text-white mx-auto p-[15px]">
           <p className="sobremimtitle text-[30px] mt-[15px] rounded-xl border-2 border-lime-400 bg-[#10435e] mx-auto p-[5px] w-[200px] mb-[50px]">Sobre mim:</p>
           <p className="sobremimtext text-[15px] w-[700px]">Olá, meu nome é Vitor de Oliveira da Graça,
@@ -248,7 +255,7 @@ const Home: React.FC = () => {
         </p>
         <p className="relative z-1 mb-[35px] text-lime-500 text-[20px]">
           <span className="text-white text-[15px]">(Achei interessante incluir)</span><br />
-          Missão, visão e valores do banco Sicoob:
+          Missão, visão e valores da Sicoob:
         </p>
         <p className="textenc1 mb-[60px] text-white text-left w-[70%] mx-auto">
           <span className="text-lime-500">Missão:</span><br />
@@ -263,7 +270,7 @@ const Home: React.FC = () => {
           Cooperação, transparência, ética, inovação e sustentabilidade.
         </p>
         <p className="relative z-1 mb-[35px] text-lime-500 text-[20px]">
-          Um dos organogramas do banco Sicoob:
+          Um dos organogramas da Sicoob:
         </p>
         <div className="imgenc3 flex justify-center mx-auto border-2 border-lime-500 mb-[30px] p-[10px] w-[700px] bg-white">
           <Image src={organograma} alt="imagem" />
@@ -342,7 +349,7 @@ const Home: React.FC = () => {
           Empatia: Compreender e compartilhar os sentimentos alheios.
         </p>
       </div>
-      <div className="bg-lime-500 text-center encontro1 p-[50px]" id='enc2'>
+      <div className="bg-lime-500 text-center encontro1 p-[50px]" id='enc6'>
         <p className="relative z-1 text-white text-[20px]">Encontro 6</p>
         <p className="titleenc1 text-[#10435e] text-[40px]">Gestão do tempo</p>
         <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
@@ -358,17 +365,186 @@ const Home: React.FC = () => {
           <Image src={relogio} alt="imagem" />
         </div>
         <p className="textenc1 text-white w-[70%] mx-auto">
-          O que mais me interessou foi a Técnica Pomodoro, que funciona dividindo o 
-          tempo em blocos de 25 minutos de trabalho intenso, seguidos de uma pausa 
-          curta de 5 minutos. Após quatro ciclos, faz-se uma pausa mais longa, 
-          geralmente de 15 a 30 minutos. Essa técnica ajuda a manter o foco e 
-          evita a sensação de cansaço ao quebrar o trabalho em partes gerenciáveis. 
-          Também concordo com o uso de aplicativos para a organização do tempo, 
-          pois já utilizo algumas ferramentas que me ajudam a planejar tarefas e 
-          manter a produtividade em dia. Além disso, a técnica contra a 
-          procrastinação foi importante para mim, pois auxilia a evitar 
+          O que mais me interessou foi a Técnica Pomodoro, que funciona dividindo o
+          tempo em blocos de 25 minutos de trabalho intenso, seguidos de uma pausa
+          curta de 5 minutos. Após quatro ciclos, faz-se uma pausa mais longa,
+          geralmente de 15 a 30 minutos. Essa técnica ajuda a manter o foco e
+          evita a sensação de cansaço ao quebrar o trabalho em partes gerenciáveis.
+          Também concordo com o uso de aplicativos para a organização do tempo,
+          pois já utilizo algumas ferramentas que me ajudam a planejar tarefas e
+          manter a produtividade em dia. Além disso, a técnica contra a
+          procrastinação foi importante para mim, pois auxilia a evitar
           distrações e focar no que realmente importa.
         </p>
+      </div>
+      <div className="text-center encontro1 p-[50px]" id='enc7'>
+        <p className="relative z-1 text-white text-[20px]">Encontro 7</p>
+        <p className="titleenc1 text-lime-500 text-[40px]">Saúde do Trabalhador</p>
+        <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          No sétimo encontro, aprendi sobre a importância da saúde e segurança do
+          trabalhador. Consegui enchergar como a saúde está diretamente relacionada ao
+          ambiente de trabalho e como fatores como ergonomia desempenham um papel
+          importante para evitar lesões e desconfortos. Também vi sobre como
+          manter a saúde em dia, aprendendo alguns hábitos de higiene e incluindo
+          o impacto negativo que a privação de sono tem sobre o cérebro,
+          comportamento e emoções. Aprendi sobre a quantidade ideal de sono que
+          devemos ter e a importância de fazer pausas durante o trabalho para
+          descansar a mente e o corpo. Em geral, recebi dicas práticas para cuidar
+          melhor da saúde no ambiente de trabalho.
+        </p>
+        <div className="imgenc2 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Image src={saude} alt="imagem" />
+        </div>
+        <p className="textenc1 mb-[50px] text-white w-[70%] mx-auto">
+          Uma coisa que realmente me chamou atenção foi a relação entre saúde e trabalho,
+          principalmente a ergonomia, que ajuda a evitar problemas físicos ao garantir
+          um ambiente de trabalho mais confortável. Outro ponto importante foi entender
+          os efeitos da falta de sono, tanto no cérebro quanto no comportamento e emoções,
+          mostrando o quanto é essencial dormir o tempo certo para ter energia e equilíbrio.
+          Também achei muito interessante a importância de fazer pausas durante o trabalho,
+          já que isso ajuda a manter a produtividade e a saúde mental em dia.
+          As dicas para cuidar da saúde no trabalho, como manter uma boa postura e fazer
+          alongamentos, foram ótimas para evitar problemas no futuro (ainda mais para mim que
+          sou programador e passo horas sentado em frente ao computador).
+        </p>
+      </div>
+      <div className="bg-lime-500 text-center encontro1 p-[50px]" id='enc8'>
+        <p className="relative z-1 text-white text-[20px]">Encontro 8</p>
+        <p className="titleenc1 text-[#10435e] text-[40px]">Noções básicas do uso do computador</p>
+        <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          No oitavo encontro, pude ver sobre conceitos básicos do uso do computador e a
+          importância da tecnologia (a palavra "tecnologia" se refere ao conjunto
+          de conhecimentos e ferramentas que facilitam nossa vida e o trabalho).
+          Falamos sobre o uso de desktops (que são computadores de mesa), e como eles
+          são fundamentais para diversas atividades. Também exploramos informática
+          básica para estudos online, entendendo o uso do Windows 10, navegadores,
+          internet, armazenamento na nuvem e práticas para aproveitar melhor
+          o estudo online. Aprendi também sobre a relação entre as novas tecnologias
+          e o mercado de trabalho, e como é essencial ter conhecimentos tecnológicos,
+          especialmente com a chegada da Indústria 4.0, que está transformando a
+          forma como trabalhamos. Além disso, vi como diversas áreas da tecnologia
+          serão fundamentais no mercado de trabalho do futuro.
+        </p>
+        <div className="imgenc2 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Image src={desenhopc} alt="imagem" />
+        </div>
+        <p className="textenc1 text-white w-[70%] mx-auto">
+          O que mais me chamou a atenção foi a importância que deram à tecnologia
+          para o futuro do mercado de trabalho. Isso me fez pensar em como as
+          inovações vão impactar na minha área, (programação em geral e especificadamente
+          Automação Operacional), que já tem e vai ter um papel fundamental no mercado.
+          Gostei de aprender mais sobre o conceito de Indústria 4.0, que integra
+          novas tecnologias, e as competências necessárias para se destacar nessa
+          nova realidade. Também achei muito útil as noções básicas de informática
+          para estudos online, como o uso do Windows 10, navegadores e o trabalho
+          na nuvem, além das boas práticas que ajudam a ser mais eficiente.
+        </p>
+        <div className="imgenc2 flex justify-center mx-auto mb-[30px] mt-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Image src={tecdesenho} alt="imagem" />
+        </div>
+      </div>
+      <div className="text-center encontro1 p-[50px]" id='enc9'>
+        <p className="relative z-1 text-white text-[20px]">Encontro 9</p>
+        <p className="titleenc1 text-lime-500 text-[40px]">Internet e segurança digital</p>
+        <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          No nono encontro, aprendi mais sobre internet e segurança digital, destacando como
+          proteger nossos dados enquanto usamos a rede. Vi também sobre a Lei Geral de
+          Proteção de Dados (LGPD), que é uma legislação brasileira criada para garantir
+          que empresas e organizações tratem nossas informações de maneira segura e responsável.
+          Discutimos também a importância de tomar cuidado ao usar redes sociais, pois
+          compartilhar dados pessoais de forma descuidada pode comprometer a privacidade e nossa segurança.
+          Além disso, aprendi sobre os riscos de vazamento de dados e como evitar outras
+          situações que possam expor nossas informações.
+        </p>
+        <div className="imgenc2 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Image src={seguranca} alt="imagem" />
+        </div>
+        <p className="textenc1 mb-[50px] text-white w-[70%] mx-auto">
+          O que mais me chamou atenção foi a LGPD, que busca proteger nossos dados e
+          garantir que as empresas os usem de maneira adequada. Achei importante entender
+          melhor os cuidados que devemos ter ao usar redes sociais e como manter a privacidade
+          online, além de aprender sobre os riscos de vazamento de dados. Proteger informações
+          pessoais, tanto em redes sociais quanto em qualquer outro espaço online, é fundamental
+          para evitar problemas e garantir nossa segurança digital.
+        </p>
+        <p className="relative z-1 mb-[35px] text-lime-500 text-[20px]">
+          Aqui estão algumas dicas de segurança digital:
+        </p>
+        <p className="textenc1 mb-[60px] text-white text-left w-[60%] mx-auto">
+          <span className="text-lime-500">1- </span>
+          Use senhas fortes: Crie senhas únicas com letras, números e símbolos. <br />
+          <span className="text-lime-500">2- </span>
+          Ative a autenticação de dois fatores: Adicione uma camada extra de segurança ao login. <br />
+          <span className="text-lime-500">3- </span>
+          Cuidado com e-mails suspeitos: Não clique em links ou baixe anexos de fontes desconhecidas. <br />
+          <span className="text-lime-500">4- </span>
+          Mantenha seus dispositivos atualizados: Atualize regularmente sistemas e aplicativos. <br />
+          <span className="text-lime-500">5- </span>
+          Use redes Wi-Fi seguras: Evite acessar informações sensíveis em redes públicas. <br />
+        </p>
+      </div>
+      <div className="bg-lime-500 text-center encontro1 p-[50px]" id='enc10'>
+        <p className="relative z-1 text-white text-[20px]">Encontro 10</p>
+        <p className="titleenc1 text-[#10435e] text-[40px]">Pacote office</p>
+        <p className="textenc1 text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          No décimo e último encontro, aprendi sobre o Pacote Office, um conjunto de
+          ferramentas de produtividade criado pela Microsoft para facilitar
+          diversas tarefas no dia a dia. Pude aprender sobre o Word que serve para criar e editar
+          documentos de texto, o Excel que é utilizado para realizar cálculos e
+          organizar dados em planilhas, enquanto o PowerPoint que é ideal para
+          criar apresentações visuais. Além disso, conheci outras funcionalidades
+          do Pacote Office, como o Access, Outlook, e OneNote.
+          Também pude ver que o Pacote Office oferece uma interface amigável e
+          várias ferramentas úteis que ajudam a otimizar o trabalho, seja em casa,
+          na escola ou no ambiente corporativo.
+        </p>
+        <div className="imgenc2 flex justify-center mx-auto mb-[30px] p-[10px] w-[300px] hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Image src={office} alt="imagem" />
+        </div>
+        <p className="textenc1 text-white w-[70%] mx-auto">
+          O que mais me chamou a atenção foi a versatilidade do Pacote Office e
+          como cada ferramenta atende diferentes necessidades, como criar documentos
+          no Word e fazer análises de dados no Excel. Também achei bem útil aprender
+          sobre outras funções, como o Access e o Outlook, que são super importantes
+          para quem trabalha em empresas. As dicas para usar o Pacote Office de forma
+          mais eficiente, como os atalhos e as opções de formatação, foram bem práticas
+          e me ajudaram a entender melhor como aproveitar essas ferramentas no dia a dia.
+        </p>
+      </div>
+      <div className="text-center encontro1 p-[50px] mb-[-100px]" id='conclusao'>
+        <p className="titleenc1 text-white text-[40px]">Conclusão:</p>
+        <p className="textenc1 bg-[#00AE9D] rounded-md p-[20px] text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          Esse curso foi uma experiência super legal e cheia de aprendizado. Aprendi muita
+          coisa importante, tanto para a vida pessoal quanto para o trabalho, como os direitos
+          dos trabalhadores, saúde no trabalho, e até ferramentas práticas, como o Pacote
+          Office e como organizar melhor o tempo. Cada encontro trouxe algo diferente,
+          desde a importância de ter um bom relacionamento com os colegas até a necessidade
+          de cuidar da nossa saúde física e mental no dia a dia.
+        </p>
+        <p className="textenc1 bg-[#00AE9D] rounded-md p-[20px] text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          Também achei muito interessante entender mais sobre ética, segurança digital, e como
+          a tecnologia vai influenciar o futuro do mercado de trabalho. Isso me ajudou a
+          perceber o que vão esperar de mim como profissional e como posso me preparar melhor
+          para os desafios. Com tudo que revi e aprendi, sinto que estou mais pronto para entrar
+          no ambiente de trabalho, com mais conhecimento e ferramentas pra lidar com o que vem
+          por aí.
+        </p>
+        <p className="textenc1 bg-[#00AE9D] rounded-md p-[20px] text-white mb-[40px] mt-[40px] w-[70%] mx-auto">
+          Foi legal também ver que algumas coisas que já uso, podem
+          ser melhoradas e me ajudar ainda mais na produtividade. No geral, o curso foi bem
+          completo e me fez pensar muito sobre minhas responsabilidades e o que posso fazer
+          no mercado de trabalho.
+        </p>
+      </div>
+
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00AE9D" fill-opacity="1" d="M0,256L120,250.7C240,245,480,235,720,234.7C960,235,1200,245,1320,250.7L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+      <div id="avalie" className="avaliacao flex items-center bg-[#00AE9D] h-[440px]">
+        <AvaliationForm />
+      </div>
+      <div className="flex items-center justify-center text-white h-[60px] bg-lime-500 text-center">
+        <p>© {new Date().getFullYear()} Vitor de Oliveira da Graça</p>
       </div>
     </div>
   );
