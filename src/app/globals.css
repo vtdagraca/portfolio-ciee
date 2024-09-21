@@ -256,7 +256,6 @@ header {
   .tamanhoavaliacao {
     width: 300px;
   }
-
   .avaliacaotext1 {
     font-size: 30px;
   }
@@ -280,10 +279,6 @@ header {
     font-size: 12px;
     width: 100%;
   }
-  #portfolio {
-    margin-top: 180px;
-  }
-
   .avaliacaotext1 {
     font-size: 18px;
   }
@@ -297,6 +292,9 @@ header {
   }
   .nomeresponsivo {
     display: none;
+  }
+  .vtdagracatitle {
+    font-size: 40px;
   }
 }
 
